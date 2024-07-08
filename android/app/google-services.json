@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "912268728164",
+    "project_id": "fir-practice-1b0b6",
+    "storage_bucket": "fir-practice-1b0b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912268728164:android:a9b4fb301211ba1a140c71",
+        "android_client_info": {
+          "package_name": "com.techofgrowth.firebase_practice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyV5yoNZpAJN6tszV-N_1drtbkvHRKwp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
