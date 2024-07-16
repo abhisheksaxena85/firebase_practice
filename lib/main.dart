@@ -1,3 +1,5 @@
+import 'dart:developer';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_practice/firebase_options.dart';
@@ -6,12 +8,20 @@ import 'package:flutter/material.dart';
 import 'HomePage.dart';
 
 void main()async {
-  WidgetsFlutterBinding.ensureInitialized(); //Making sure widget initialization
+  WidgetsFlutterBinding.ensureInitialized(); // Making sure widget initialization
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform
   ); //Initialising the Firebase App
 
-  //Getting firestore data
+
+  //User data in Map<String, dynamic>
+  // Map<String, dynamic> userData = {
+  //   'name': 'Saurabh Saxena',
+  //   'email': 'saurabhsaxena@gmail.com'
+  // };
+
+  // await FirebaseFirestore.instance.collection("users").doc("new-user").delete();
+  // log('data update !');
 
   runApp(const MyApp());
 }
@@ -26,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: (FirebaseAuth.instance.currentUser) != null ? const UserPage(verificationID: "verificationID"): HomePage()
+      home: HomePage()
     );
   }
 }
